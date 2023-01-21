@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    --color-text: black;
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+    font-family: 'panton-bold';
+    background-color: #26314E;
+    background: url(images/Tame-Impala.webp), rgba(0,0,0,0.3);
+    background-blend-mode: overlay;
+    background-size: cover;
+
+  }
+    
+
+
+@font-face {
+    font-family: 'panton-bold';
+    src: url(Panton\ Bold.ttf);
+  }
+
+.header {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+li {
+    text-align: center;
+    color: white;
+    padding: 0 1em;
+    margin: 0 auto;
+    margin-top: 1em;
+    left: 0;
+    right: 0;
+    font-size: 20px !important;
+    font-weight: normal !important;
+    justify-content: center;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/*Uređivanje navigacije*/
+li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position:absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    transition: width 0.3s;
+}
+
+/*Underline animacija navigacije*/
+li:hover::after{
+    width: 50%;
+}
+
+/*Uređivanje hero teksta*/
+.text-box {
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0%;
+    margin-left: 30px;
+}
+.text-box p {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.text-box h1 {
+    margin-top: 10px;
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+ @keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
+ }
+
+ /*YT video okviri*/
+ .ytvid {
+    max-width: 45%;
+    max-height: 45%;
+    margin: 40px auto;
+    display: flex;
+    border: 3px solid whitesmoke;
+    opacity: 1;
+ }
+
+ .ytvid:hover {
+    opacity: 0.9;
+ }
+ 
+.radio p {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: whitesmoke;
+    margin-left: 100px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 20px;
+  }
+  
+
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+ 
+  .container input:checked ~ .checkmark {
+    background-color: #9bdcf5;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+ 
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.question {
+    color: whitesmoke;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+/*Stil za mobitel*/
+@media only screen and (max-width: 400px) {
+
+
+  .page {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .section {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .menu {
+      background-color: #5995DA;
+      height: 80px;
+  }
+
+  .header {
+      background-color: PINK;
+  }
+
+  .content {
+      background-color: #EAEDF0;
+      height: 600px;
+  }
+
+  .sign-up {
+      background-color: #D6E9FE;
+  }
+
+  .feature-1 {
+      background-color: #F5CF8E;
+  }
+
+  .feature-2 {
+      background-color: #F09A9D;
+  }
+
+  .feature-3 {
+      background-color: #C8C6FA;
+  }
+}
+
+/*Stil za tablet*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+
+  .page {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .section {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .menu {
+      background-color: #5995DA;
+      height: 80px;
+  }
+
+  .content {
+      background-color: #EAEDF0;
+      height: 600px;
+  }
+
+  .sign-up {
+      background-color: #D6E9FE;
+  }
+
+  .feature-1 {
+      background-color: #F5CF8E;
+  }
+
+  .feature-2 {
+      background-color: #F09A9D;
+  }
+
+  .feature-3 {
+      background-color: #C8C6FA;
+  }
+}
